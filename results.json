@@ -1,0 +1,110 @@
+{
+ "raw_rows": 3180,
+ "rows_after_dedup": 3002,
+ "clean_rows": 2827,
+ "exact_dups": 120,
+ "near_dups": 58,
+ "raw_profile": {
+  "Review Text": 0.03459119496855346,
+  "Rating ": 0.014779874213836478,
+  "review_date": 0.01509433962264151,
+  "Skin Type": 0.11572327044025157,
+  "Verified Purchase": 0.1531446540880503,
+  "Product Type": 0.031132075471698113,
+  "Ingredients": 0.15534591194968553
+ },
+ "clean_profile": {
+  "rating": 0.04987619384506544,
+  "review_date": 0.050937389458790235,
+  "skin_type (unknown)": 0.08949416342412451,
+  "verified_purchase": 0.1545808277325787,
+  "product_type (other)": 0.0,
+  "ingredients": 0.1528121683763707,
+  "price_usd": 0.0
+ },
+ "skin_missing": 328,
+ "skin_recovered": 75,
+ "price_outliers": 59,
+ "length_outliers": 13,
+ "length_cap": 41,
+ "promo": 80,
+ "mismatches": 74,
+ "invalid_rating_naive_share": 0.03522012578616352,
+ "accuracy": {
+  "product_type": 0.9904492394764768,
+  "skin_type": 0.991064491064491,
+  "rating": 0.990692479523455,
+  "price_median_rel_err": 0.00017713806539088726,
+  "price_within_10pct": 0.9904492394764768,
+  "fragrance_flag": 0.9949895615866389,
+  "reason_rule_overall": 0.9642730810045985,
+  "reason_pr": {
+   "side_effect": {
+    "precision": 0.9868073878627969,
+    "recall": 1.0
+   },
+   "misapplication": {
+    "precision": 0.9818181818181818,
+    "recall": 0.6952789699570815
+   },
+   "failure": {
+    "precision": 0.7951482479784366,
+    "recall": 0.9899328859060402
+   },
+   "none": {
+    "precision": 0.9911087866108786,
+    "recall": 1.0
+   }
+  }
+ },
+ "checks": {
+  "review_id unique": true,
+  "rating within 1-5 or NaN": true,
+  "no future dates": true,
+  "price_usd positive and present": true,
+  "product_type in allowed set": true,
+  "skin_type in allowed set": true,
+  "text_clean has >= 3 words": true
+ },
+ "split": {
+  "train": 2286,
+  "test": 541,
+  "overlap": 0
+ },
+ "type_counts": {
+  "serum": 1095,
+  "facewash": 949,
+  "patch": 783
+ },
+ "skin_counts": {
+  "oily": 734,
+  "combination": 690,
+  "sensitive": 628,
+  "dry": 522,
+  "unknown": 253
+ },
+ "reason_counts": {
+  "none": 1912,
+  "side_effect": 379,
+  "failure": 371,
+  "misapplication": 165
+ },
+ "rating_before": {
+  "1.0": 422,
+  "2.0": 422,
+  "3.0": 145,
+  "4.0": 1024,
+  "5.0": 1008,
+  "nan": 159
+ },
+ "rating_after": {
+  "1.0": 383,
+  "2.0": 371,
+  "3.0": 116,
+  "4.0": 915,
+  "5.0": 901,
+  "nan": 141
+ },
+ "n_cols_raw": 14,
+ "n_cols_clean": 33
+}

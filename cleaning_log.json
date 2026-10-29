@@ -1,0 +1,79 @@
+[
+ {
+  "step": "S1 standardise columns",
+  "rows_before": 3180,
+  "rows_after": 3180,
+  "cells_changed": 0,
+  "note": "snake_case names; trimmed whitespace in text columns"
+ },
+ {
+  "step": "S2 coerce types",
+  "rows_before": 3180,
+  "rows_after": 3180,
+  "cells_changed": 3180,
+  "note": "rating to float 1-5 (invalid to NaN); dates parsed with explicit formats; prices converted to USD; booleans mapped"
+ },
+ {
+  "step": "S3-S4 standardise categories",
+  "rows_before": 3180,
+  "rows_after": 3180,
+  "cells_changed": 3180,
+  "note": "product_type mapped by keyword rules with product-name fallback (99 missing types recovered); brand title-cased; skin_type unified"
+ },
+ {
+  "step": "S5 duplicates",
+  "rows_before": 3180,
+  "rows_after": 3002,
+  "cells_changed": 0,
+  "note": "exact duplicate IDs removed: 120; near-duplicates (same product, normalised text, date, rating, votes) removed: 58"
+ },
+ {
+  "step": "S6 text cleaning",
+  "rows_before": 3002,
+  "rows_after": 2827,
+  "cells_changed": 0,
+  "note": "HTML/URL/emoji handled, negations kept, repeated letters squeezed, promo reviews flagged (80); reviews under 3 words removed: 175"
+ },
+ {
+  "step": "S7 missing skin type",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 75,
+  "note": "skin type recovered from review text for 75 of 328 missing; remaining kept as an explicit unknown class"
+ },
+ {
+  "step": "S8 outliers",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 72,
+  "note": "price outliers repaired from product median: 59; review length capped at 41 words (13 flagged); helpful votes winsorised at p99=12"
+ },
+ {
+  "step": "S9 ingredients",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 0,
+  "note": "ingredient lists parsed (commas inside brackets respected); fragrance_free derived from parfum + EU allergen names; 432 rows have no ingredient list (kept as NaN, not guessed); claim-vs-label mismatches flagged: 74"
+ },
+ {
+  "step": "S10 feature flags",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 0,
+  "note": "regex flags for lesion depth, barrier damage, smell, efficacy (negation-aware: \"no irritation\" is not a complaint); rule-based first-pass reason label"
+ },
+ {
+  "step": "S11 validation",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 0,
+  "note": "review_id unique: PASS; rating within 1-5 or NaN: PASS; no future dates: PASS; price_usd positive and present: PASS; product_type in allowed set: PASS; skin_type in allowed set: PASS; text_clean has >= 3 words: PASS"
+ },
+ {
+  "step": "S12 grouped split",
+  "rows_before": 2827,
+  "rows_after": 2827,
+  "cells_changed": 0,
+  "note": "80/20 split grouped by product_id; products appearing in both sets: 0"
+ }
+]
