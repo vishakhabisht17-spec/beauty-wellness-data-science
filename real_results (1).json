@@ -1,0 +1,679 @@
+{
+ "files": [
+  "reviews_0-250_small.csv",
+  "reviews_500-750.csv"
+ ],
+ "raw_rows": 247289,
+ "raw_products": 302,
+ "n_rows": 140435,
+ "n_products": 98,
+ "type_counts": {
+  "serum": 76204,
+  "facewash": 63652,
+  "patch": 579
+ },
+ "type_products": {
+  "facewash": 37,
+  "patch": 1,
+  "serum": 60
+ },
+ "date_min": "2008-08-28",
+ "date_max": "2023-03-21",
+ "missing_pct": {
+  "skin_type": 8.3,
+  "is_recommended": 16.1,
+  "helpfulness": 54.6,
+  "review_text": 0.0,
+  "price_usd": 0.0,
+  "date": 0.0
+ },
+ "rating_share": {
+  "1": 5.1,
+  "2": 4.7,
+  "3": 7.7,
+  "4": 19.2,
+  "5": 63.2
+ },
+ "describe": {
+  "rating": {
+   "mean": 4.307466087513796,
+   "median": 5.0,
+   "skew": -1.68811710387669,
+   "min": 1.0,
+   "max": 5.0
+  },
+  "price_usd": {
+   "mean": 55.743466087513795,
+   "median": 40.0,
+   "skew": 3.3020005104697407,
+   "min": 8.9,
+   "max": 425.0
+  },
+  "total_feedback_count": {
+   "mean": 3.740043436465269,
+   "median": 0.0,
+   "skew": 44.0938449335802,
+   "min": 0.0,
+   "max": 1982.0
+  },
+  "n_words": {
+   "mean": 59.52995335920533,
+   "median": 49.0,
+   "skew": 2.2371351670674433,
+   "min": 0.0,
+   "max": 828.0
+  }
+ },
+ "words_iqr_outliers": 1744,
+ "by_type": {
+  "facewash": {
+   "n": 63652,
+   "mean": 4.313,
+   "median": 5.0,
+   "low": 0.104,
+   "price": 29.206,
+   "rec": 0.834
+  },
+  "patch": {
+   "n": 579,
+   "mean": 3.041,
+   "median": 3.0,
+   "low": 0.408,
+   "price": 20.0,
+   "rec": 0.504
+  },
+  "serum": {
+   "n": 76204,
+   "mean": 4.313,
+   "median": 5.0,
+   "low": 0.091,
+   "price": 78.182,
+   "rec": 0.856
+  }
+ },
+ "kruskal": {
+  "H": 530.0826127495202,
+  "p": 7.834714315575945e-116,
+  "pairs": {
+   "patch vs serum": {
+    "mean_diff": -1.2713018342094013,
+    "p_bonf": 3.065956909921053e-104,
+    "rank_biserial": -0.4542164750212796
+   },
+   "patch vs facewash": {
+    "mean_diff": -1.2712023994459507,
+    "p_bonf": 9.329048168462927e-110,
+    "rank_biserial": -0.4580560131205659
+   },
+   "serum vs facewash": {
+    "mean_diff": 9.943476345064539e-05,
+    "p_bonf": 9.524642041882374e-11,
+    "rank_biserial": -0.017674717636130266
+   }
+  }
+ },
+ "patch_products": [
+  [
+   "Focuspot Micro Tip Patches",
+   579,
+   3.04
+  ]
+ ],
+ "reasons": {
+  "table_pct": {
+   "facewash": {
+    "breakout": 16.6,
+    "deep_lesion": 1.0,
+    "irritation_or_smell": 43.1,
+    "not_effective": 6.9,
+    "other": 32.5
+   },
+   "patch": {
+    "breakout": 5.5,
+    "deep_lesion": 1.3,
+    "irritation_or_smell": 14.8,
+    "not_effective": 43.2,
+    "other": 35.2
+   },
+   "serum": {
+    "breakout": 14.8,
+    "deep_lesion": 0.4,
+    "irritation_or_smell": 32.4,
+    "not_effective": 15.1,
+    "other": 37.3
+   }
+  },
+  "n_low": {
+   "facewash": 6603,
+   "patch": 236,
+   "serum": 6964
+  },
+  "chi2": 598.1354906957355,
+  "p": 5.889110142537594e-124,
+  "dof": 8,
+  "cramers_v": 0.14719669005001404,
+  "residuals": {
+   "facewash": {
+    "breakout": 2.3,
+    "deep_lesion": 2.6,
+    "irritation_or_smell": 7.8,
+    "not_effective": -11.3,
+    "other": -3.4
+   },
+   "patch": {
+    "breakout": -3.9,
+    "deep_lesion": 1.0,
+    "irritation_or_smell": -5.6,
+    "not_effective": 14.2,
+    "other": 0.1
+   },
+   "serum": {
+    "breakout": -1.5,
+    "deep_lesion": -2.8,
+    "irritation_or_smell": -6.6,
+    "not_effective": 8.4,
+    "other": 3.3
+   }
+  }
+ },
+ "patch_deep": {
+  "n": 236,
+  "share": 0.07203389830508475,
+  "ci": [
+   0.0423728813559322,
+   0.1059322033898305
+  ],
+  "share_nonpatch_low": 0.03523254956880666,
+  "mean_rating_deep": 3.981818181818182,
+  "mean_rating_notdeep": 2.8208955223880596,
+  "n_deep_all": 110,
+  "p": 4.489380826029929e-12
+ },
+ "skin_counts": {
+  "combination": 72656,
+  "dry": 22950,
+  "normal": 16605,
+  "oily": 16541,
+  "unknown": 11683
+ },
+ "irrit_by_skin": {
+  "combination": 0.1597,
+  "dry": 0.1728,
+  "normal": 0.1462,
+  "oily": 0.148,
+  "unknown": 0.1564
+ },
+ "sensitive": {
+  "n": 18088,
+  "irrit_rate": 0.3414418398938523,
+  "irrit_rate_other": 0.13157658136284503,
+  "by_type": {
+   "facewash": {
+    "size": 10755,
+    "mean": 0.306
+   },
+   "patch": {
+    "size": 20,
+    "mean": 0.6
+   },
+   "serum": {
+    "size": 7313,
+    "mean": 0.393
+   }
+  },
+  "rating_sens": 4.310979655019903,
+  "rating_other": 4.306946635389507,
+  "fisher_patch_vs_serum": {
+   "p": 0.06774933535968936,
+   "odds_ratio": 2.3207941483803554
+  }
+ },
+ "smell": {
+  "n": 35698,
+  "share": 0.2541958913376295,
+  "mean_rating_smell": 4.266373466300633,
+  "mean_rating_nosmell": 4.321471877178075,
+  "p": 1.1367520237553663e-112,
+  "by_type": {
+   "facewash": 0.317,
+   "patch": 0.0,
+   "serum": 0.204
+  }
+ },
+ "rating_vs_recommend": {
+  "corr_spearman": 0.700219342594886,
+  "rec_among_rating1_2": 0.02339944328462074,
+  "rec_among_rating5": 0.9986743141604891,
+  "rating5_not_rec": 98,
+  "rating1_rec": 47
+ },
+ "time": {
+  "by_year": {
+   "2008": {
+    "n": 476,
+    "mean": 4.372
+   },
+   "2009": {
+    "n": 1378,
+    "mean": 4.401
+   },
+   "2010": {
+    "n": 1721,
+    "mean": 4.481
+   },
+   "2011": {
+    "n": 1833,
+    "mean": 4.401
+   },
+   "2012": {
+    "n": 1618,
+    "mean": 4.407
+   },
+   "2013": {
+    "n": 1988,
+    "mean": 4.353
+   },
+   "2014": {
+    "n": 2382,
+    "mean": 4.301
+   },
+   "2015": {
+    "n": 2757,
+    "mean": 4.158
+   },
+   "2016": {
+    "n": 4374,
+    "mean": 4.341
+   },
+   "2017": {
+    "n": 7077,
+    "mean": 4.339
+   },
+   "2018": {
+    "n": 11517,
+    "mean": 4.35
+   },
+   "2019": {
+    "n": 24249,
+    "mean": 4.306
+   },
+   "2020": {
+    "n": 30154,
+    "mean": 4.24
+   },
+   "2021": {
+    "n": 25106,
+    "mean": 4.319
+   },
+   "2022": {
+    "n": 19280,
+    "mean": 4.329
+   },
+   "2023": {
+    "n": 4525,
+    "mean": 4.321
+   }
+  },
+  "rho": -0.024361561779299264,
+  "p": 6.806679050521785e-20
+ },
+ "votes_by_rating": {
+  "1": 12.72,
+  "2": 5.5,
+  "3": 3.93,
+  "4": 2.45,
+  "5": 3.25
+ },
+ "top_corr": [
+  [
+   "rating",
+   "recommended",
+   0.700219342594886
+  ],
+  [
+   "praise",
+   "rating",
+   0.33613404632393307
+  ],
+  [
+   "praise",
+   "recommended",
+   0.3175668404141448
+  ]
+ ],
+ "top_terms": {
+  "facewash": [
+   [
+    "skin",
+    8956
+   ],
+   [
+    "not",
+    5451
+   ],
+   [
+    "cleanser",
+    3927
+   ],
+   [
+    "face",
+    3887
+   ],
+   [
+    "product",
+    3717
+   ],
+   [
+    "out",
+    3570
+   ],
+   [
+    "like",
+    3012
+   ],
+   [
+    "dry",
+    2381
+   ],
+   [
+    "after",
+    2323
+   ],
+   [
+    "using",
+    2187
+   ]
+  ],
+  "serum": [
+   [
+    "skin",
+    8224
+   ],
+   [
+    "not",
+    6132
+   ],
+   [
+    "product",
+    5262
+   ],
+   [
+    "out",
+    2701
+   ],
+   [
+    "like",
+    2607
+   ],
+   [
+    "using",
+    2270
+   ],
+   [
+    "didn",
+    2203
+   ],
+   [
+    "face",
+    2107
+   ],
+   [
+    "after",
+    2068
+   ],
+   [
+    "did",
+    1977
+   ]
+  ],
+  "patch": [
+   [
+    "not",
+    200
+   ],
+   [
+    "patches",
+    129
+   ],
+   [
+    "dark",
+    115
+   ],
+   [
+    "these",
+    103
+   ],
+   [
+    "did",
+    96
+   ],
+   [
+    "they",
+    94
+   ],
+   [
+    "product",
+    94
+   ],
+   [
+    "them",
+    88
+   ],
+   [
+    "spot",
+    86
+   ],
+   [
+    "used",
+    85
+   ]
+  ]
+ },
+ "frag": {
+  "products_known": 98,
+  "products_fragranced": 49,
+  "reviews_known": 140435,
+  "ingredients_missing_products": 0,
+  "share_products_by_type": {
+   "facewash": 0.649,
+   "patch": 0.0,
+   "serum": 0.417
+  },
+  "fragranced": {
+   "n": 71244,
+   "mean_rating": 4.322258716523497,
+   "low_rate": 0.09525012632642749,
+   "irrit_rate": 0.14732468699118523,
+   "products": 49
+  },
+  "free": {
+   "n": 69191,
+   "mean_rating": 4.29223453917417,
+   "low_rate": 0.1014149239062884,
+   "irrit_rate": 0.17022445115694237,
+   "products": 49
+  },
+  "irrit_chi2": 137.75978126093233,
+  "irrit_p": 8.22479604223281e-32,
+  "irrit_or": 0.8422296540341033,
+  "rating_mwu_p": 2.6502866399909076e-06,
+  "adj_or": {
+   "fragranced": 0.8729324139079961,
+   "sensitive": 3.5243976531210124,
+   "serum": 0.5908268787415242,
+   "facewash": 0.5076881137857705
+  },
+  "adj_or_fragranced_ci_product_bootstrap": [
+   0.6970776162003329,
+   1.0950662348400608
+  ],
+  "product_level": {
+   "n_products": 97,
+   "irr_fragranced": 0.1434665136022427,
+   "irr_free": 0.17601359103080716,
+   "n_fragranced": 48,
+   "n_free": 49,
+   "mwu_p": 0.0518260769656888
+  },
+  "sens_irrit": {
+   "fragranced": 0.3373956960913483,
+   "free": 0.3455456570155902,
+   "n_f": 9108,
+   "n_free": 8980
+  },
+  "frag_free_with_strong_active": 0.2653061224489796,
+  "frag_with_strong_active": 0.14285714285714285
+ },
+ "category_check": {
+  "facewash": {
+   "Face Wash & Cleansers": 48382,
+   "Exfoliators": 1627
+  },
+  "patch": {
+   "Face Serums": 579
+  },
+  "serum": {
+   "Face Serums": 61376,
+   "Mists & Essences": 11906,
+   "Night Creams": 1934
+  }
+ },
+ "patch_info": [
+  [
+   "Face Serums",
+   "0",
+   "8"
+  ]
+ ],
+ "acne_cat": [],
+ "actives": {
+  "salicylic": {
+   "products": 13,
+   "n": 16106,
+   "irrit_with": 0.15317273065938158,
+   "irrit_without": 0.15931118242726958,
+   "share_fragranced_products": 0.38461538461538464
+  },
+  "niacinamide": {
+   "products": 15,
+   "n": 16510,
+   "irrit_with": 0.17122955784373106,
+   "irrit_without": 0.15692555981440387,
+   "share_fragranced_products": 0.3333333333333333
+  },
+  "retinoid": {
+   "products": 7,
+   "n": 4447,
+   "irrit_with": 0.21520125927591635,
+   "irrit_without": 0.15675647851280997,
+   "share_fragranced_products": 0.14285714285714285
+  },
+  "vitc": {
+   "products": 28,
+   "n": 38033,
+   "irrit_with": 0.16338442931138747,
+   "irrit_without": 0.1568328743579227,
+   "share_fragranced_products": 0.5357142857142857
+  },
+  "bpo": {
+   "products": 1,
+   "n": 434,
+   "irrit_with": 0.16820276497695852,
+   "irrit_without": 0.15857743873258048,
+   "share_fragranced_products": 1.0
+  },
+  "hyaluronic": {
+   "products": 46,
+   "n": 51487,
+   "irrit_with": 0.15120321634587372,
+   "irrit_without": 0.16289292620407428,
+   "share_fragranced_products": 0.391304347826087
+  }
+ },
+ "split": {
+  "train": 111209,
+  "test": 29226
+ },
+ "n_features": 49,
+ "skew": {
+  "price": [
+   3.3020005104697407,
+   0.12088296879954397
+  ],
+  "words": [
+   2.2371351670674433,
+   -0.4298811052327659
+  ],
+  "votes": [
+   44.0938449335802,
+   1.371416981663631
+  ]
+ },
+ "price_z_check": {
+  "facewash": 6.690853970424891e-16,
+  "serum": 3.49275025162898e-17,
+  "patch": null
+ },
+ "model_perf": {
+  "A. Raw structured | Logistic regression": {
+   "cv_mean": 0.5136274085121212,
+   "cv_sd": 0.006755530900387093,
+   "test_auc": 0.5419897259699076,
+   "n_features": 10
+  },
+  "A. Raw structured | Gradient boosting": {
+   "cv_mean": 0.512867092702391,
+   "cv_sd": 0.014234425431006422,
+   "test_auc": 0.5707826412298735,
+   "n_features": 10
+  },
+  "B. + engineered structured | Logistic regression": {
+   "cv_mean": 0.674046872046752,
+   "cv_sd": 0.015244440245176195,
+   "test_auc": 0.6895760346530304,
+   "n_features": 34
+  },
+  "B. + engineered structured | Gradient boosting": {
+   "cv_mean": 0.7114633235034706,
+   "cv_sd": 0.009389998281284253,
+   "test_auc": 0.7219502143444725,
+   "n_features": 34
+  },
+  "C. + keyword and sentiment features | Logistic regression": {
+   "cv_mean": 0.8692210470787358,
+   "cv_sd": 0.0030652090502460974,
+   "test_auc": 0.8731978275370146,
+   "n_features": 47
+  },
+  "C. + keyword and sentiment features | Gradient boosting": {
+   "cv_mean": 0.8875427506905765,
+   "cv_sd": 0.004018453528607254,
+   "test_auc": 0.8836323337662682,
+   "n_features": 47
+  },
+  "D. TF-IDF text only | Logistic regression": {
+   "cv_mean": 0.9792371672678815,
+   "cv_sd": 0.0033195362168067463,
+   "n_features": 20000,
+   "test_auc": 0.9761854088093396
+  }
+ },
+ "low_prevalence": 0.09828746395129419,
+ "top_coefs_C": {
+  "most_negative": {
+   "pos_count": -1.11,
+   "n_exclaim": -0.59,
+   "sentiment_score": -0.24,
+   "log_words": -0.23,
+   "flag_praise": -0.19
+  },
+  "most_positive": {
+   "log_title_len": 0.14,
+   "log_loves": 0.23,
+   "flag_breakout": 0.24,
+   "neg_count": 0.29,
+   "flag_not_eff": 0.32,
+   "negation_count": 0.43
+  }
+ }
+}
